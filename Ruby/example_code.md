@@ -6,9 +6,11 @@
 * [while loop](#while_loop)
 * [until loop](#until_loop)
 * [for loop](#for_loop)
-* [array](#array)
+* [arrays](#arrays)
 * [hashes](#hashes)
   - [literal notation](#literal_notation)
+
+### [Histogram](#histogram)
 
 ```
 print "Integer please: "
@@ -150,7 +152,7 @@ end
 // 123
 ```
 
-##### <a name="array">array</a>
+##### <a name="arrays">arrays</a>
 
 ```
 [1,2,3,4,5]
@@ -230,4 +232,106 @@ sounds["dog"] = "woof"
 sounds["cat"] = "meow"
 
 puts sounds["dog"]    // woof
+
+OR
+
+prices = {
+  "apple" => 0.52,
+  "banana" => 0.23,
+  "kiwi" => 1.42
+}
+```
+
+```
+friends = ["Milhouse", "Ralph", "Nelson", "Otto"]
+
+family = {
+  "Homer" => "dad",
+  "Marge" => 'mom',
+  'Lisa' => 'sister',
+  'Maggie' => 'sister',
+  'Abe' => 'grandpa',
+  "Santa's Little Helper" => 'dog'
+}
+
+friends.each { |name| puts name }
+// Milhouse
+// Ralph
+// Nelson
+// Otto
+
+friends.each { |x| puts "#{x}" }
+// Milhouse
+// Ralph
+// Nelson
+// Otto
+
+family.each { |x, y| puts "#{x}: #{y}" }
+// Homer: dad
+// Marge: mom
+// Lisa: sister
+// Maggie: sister
+// Abe: grandpa
+// Santa's Little Helper: dog
+```
+```
+restaurant_menu = {
+  'noodles' => 4,
+  'soup' => 3,
+  'salad' => 2
+}
+
+restaurant_menu.each do |item, price|
+  puts "#{item}: #{price}"
+end
+
+// noodles: 4
+// soup: 3
+// salad: 2
+
+restaurant_menu = Hash.new
+restaurant_menu ['noodles'] = 4
+restaurant_menu ['soup'] = 3
+restaurant_menu ['salad'] = 2
+
+restaurant_menu.each do |item, price|
+  puts "#{item}: #{price}"
+end
+
+// noodles: 4
+// soup: 3
+// salad: 2
+
+restaurant_menu.each { |item, price| puts price }
+
+// 4
+// 3
+// 2
+```
+
+##### <a name="histogram">Histogram</a>
+```
+puts "Text please: "
+text = gets.chomp
+
+words = text.split(" ")
+
+frequencies = Hash.new(0)
+
+words.each { |word| frequencies[word] += 1 }
+
+frequencies = frequencies.sort_by { |a, b| b }
+
+frequencies.reverse!
+
+frequencies.each { |word, frequency| puts word + " " + frequency.to_s }
+
+// Text please:
+// sit in the car and sit in the house
+// the 2
+// in 2
+// sit 2
+// house 1
+// and 1
+// car 1
 ```
