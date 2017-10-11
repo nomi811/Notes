@@ -11,6 +11,9 @@
   - [literal notation](#literal_notation)
 
 ### [Histogram](#histogram)
+### [Methods](#methods)
+### [Splat Arguments](#splat_arguments)
+### [Return](#return)
 
 ```
 print "Integer please: "
@@ -334,4 +337,135 @@ frequencies.each { |word, frequency| puts word + " " + frequency.to_s }
 // house 1
 // and 1
 // car 1
+```
+
+##### <a name="methods">Methods</a>
+
+```
+def prime(n)
+  puts "That's not an integer." unless n.is_a? Integer
+  is_prime = true
+  for i in 2..n - 1
+    if n % i == 0
+      is_prime = false
+    end
+  end
+
+  if is_prime
+    puts "#{n} is prime!"
+  else
+    puts "#{n} is not prime."
+  end
+end
+
+prime(2)
+prime(9)
+prime(11)
+prime(51)
+prime(97)
+prime(18)
+
+// 2 is prime!
+// 9 is not prime.
+// 11 is prime!
+// 51 is not prime.
+// 97 is prime!
+// 18 is not prime.
+```
+```
+def array_of_10
+  puts (1..10).to_a
+end
+
+array_of_10
+
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
+// 10
+```
+```
+def square(n)
+  puts n ** 2
+end
+
+square(12)
+square(3)
+square(8)
+
+// 144
+// 9
+// 64
+```
+
+##### <a name="splat_arguments">Splat Arguments</a>
+
+`*` splat signals to Ruby that we don't know how many there are going to be, but it could be more than one.
+```
+def friend(*name)
+  puts "My friend is " + name.to_s + "."
+end
+
+friend("Bob", "Sammy", "Eric", "Ralph")
+
+// My friend is ["Bob", "Sammy", "Eric", "Ralph"].
+
+def what_up(greeting, *bros)
+  bros.each { |bro| puts "#{greeting}", "#{bro}!" }
+end
+
+what_up("What up", "Justin", "Ben", "Kevin Sorbo")
+
+// What up
+// Justin!
+// What up
+// Ben!
+// What up
+// Kevin Sorbo!
+```
+Only one greeting `"What up"`, multiple names `"Justin", "Ben", "Kevin Sorbo"`
+
+
+##### <a name="return">Return</a>
+
+```
+def double(n)
+  return n * 2
+end
+
+output = double(6)
+output += 2
+puts output
+
+// 14
+```
+```
+def greeter(name)
+  return "Hello, " + name + "!"
+end
+
+output = greeter("Nomi")
+puts output
+
+// Hello, Nomi!
+```
+```
+def by_three?(number)
+  return number % 3 == 0
+end
+
+output = by_three?(9)
+puts output
+
+output = by_three?(7)
+puts output
+
+// true
+// false
 ```
