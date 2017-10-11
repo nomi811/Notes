@@ -1,3 +1,15 @@
+# Topics
+
+### [Loops and Iterators](#loops_iterators)
+* [.each iterator](#each_iterator)
+* [.times iterator](#times_iterator)
+* [while loop](#while_loop)
+* [until loop](#until_loop)
+* [for loop](#for_loop)
+* [array](#array)
+* [hashes](#hashes)
+  - [literal notation](#literal_notation)
+
 ```
 print "Integer please: "
 user_num = Integer(gets.chomp)
@@ -49,7 +61,7 @@ end
 `...` - don't include highest number in range
 `..` - include highest number in range
 
-#### Loops & Iterators
+#### <a name="loops_iterators">Loops & Iterators</a>
 
 Repeat an action using an **iterator**. Iterator invokes a block of code.  The code block is just the bit that contains the instructions to be repeated. When you loop over an array or a hash, you say that you *iterate* over it.
 
@@ -77,7 +89,7 @@ for i in 1..5
 end
 ```
 
-##### .each iterator
+##### <a name="each_iterator">.each iterator</a>
 ```
 array = [1,2,3,4,5]
 
@@ -89,7 +101,7 @@ end
 // 1112131415
 ```
 
-##### .times iterator
+##### <a name="times_iterator">.times iterator</a>
 ```
 10.times {print "Chunky bacon!"}
 
@@ -102,7 +114,7 @@ end
 // Will print Chunky bacon! 10 times with no spaces after exclamation point.
 ```
 
-##### while loop
+##### <a name="while_loop">while loop</a>
 
 ```
 i = 3
@@ -115,7 +127,7 @@ end
 // 321
 ```
 
-##### until loop
+##### <a name="until_loop">until loop</a>
 
 ```
 i = 3
@@ -128,7 +140,7 @@ end
 // 321
 ```
 
-##### for loop
+##### <a name="for_loop">for loop</a>
 
 ```
 for k in 1..3
@@ -138,7 +150,7 @@ end
 // 123
 ```
 
-##### array
+##### <a name="array">array</a>
 
 ```
 [1,2,3,4,5]
@@ -188,7 +200,7 @@ words.each do |word|
 end
 ```
 
-##### hashes
+##### <a name="hashes">hashes</a>
 
 a hash is a collection of key-value pairs
 
@@ -199,7 +211,7 @@ hash = {
   key3 = value3
 }
 ```
-**literal notation**
+###### <a name="literal_notation">literal notation</a>
 ```
 my_hash = { "name"    => "Eric",
             "age"     => 26,
