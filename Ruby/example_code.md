@@ -9,6 +9,7 @@
 
 ### [Arrays](#arrays)
   - [array.sort](#array.sort)
+
 ### [Hashes](#hashes)
   - [literal notation](#literal_notation)
 
@@ -16,6 +17,7 @@
 ### [Methods](#methods)
 ### [Splat Arguments](#splat_arguments)
 ### [Return](#return)
+### [Compair Operators](#compair_operators)
 
 ```
 print "Integer please: "
@@ -571,4 +573,83 @@ end
 capitalize('ryan')      // Ryan
 capitalize('jane')      // Jane
 capitalize('michAel')   // MichAel
+```
+
+###### <a name="compair_operators">Compair Operators</a>
+`<=>` compairs two objects numerically or alphabetically
+
+shows `0` if they are equal
+shows `-1` if first is less than second
+shows `1` if first is greater than second
+
+```
+def alphabetize(arr, rev=false)
+  if rev
+    arr.sort { |item1, item2| item2 <=> item1 }   # decending order
+  else
+    arr.sort { |item1, item2| item1 <=> item2 }   # acending order
+  end
+end
+
+books = ['Pride and Prejudice', 'Sense and Sensibility', 'Emma', 'Mansfield Park']
+
+puts "A-Z: #{alphabetize(books)}"
+puts "Z-A: #{alphabetize books, true}"
+
+// A-Z: ["Emma", "Mansfield Park", "Pride and Prejudice", "Sense and Sensibility"]
+// Z-A: ["Sense and Sensibility", "Pride and Prejudice", "Mansfield Park", "Emma"]
+```
+
+To put numbers in order from smallest to largest
+```
+def alphabetize(arr, rev=false)
+  arr.sort!
+end
+
+numbers = [5,6,2,4]
+
+puts alphabetize(numbers)
+
+// 2
+// 4
+// 5
+// 6
+```
+```
+def alphabetize(arr, rev=false)
+  arr.sort!
+  if rev
+    arr.reverse!
+  else
+    arr.sort!
+  end
+end
+
+numbers = [5,1,3,8]
+
+puts alphabetize(numbers)
+
+// 1
+// 3
+// 5
+// 8
+```
+```
+def alphabetize(arr, rev=false)
+  arr.sort!
+  if rev
+    arr.reverse!
+  else
+    arr.sort!
+  end
+end
+
+numbers = [5,1,3,8]
+
+puts alphabetize(numbers, true)
+
+// 8
+// 5
+// 3
+// 1
 ```
