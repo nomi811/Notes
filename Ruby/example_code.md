@@ -6,8 +6,10 @@
 * [while loop](#while_loop)
 * [until loop](#until_loop)
 * [for loop](#for_loop)
-* [arrays](#arrays)
-* [hashes](#hashes)
+
+### [Arrays](#arrays)
+  - [array.sort](#array.sort)
+### [Hashes](#hashes)
   - [literal notation](#literal_notation)
 
 ### [Histogram](#histogram)
@@ -118,6 +120,16 @@ end
 
 // Will print Chunky bacon! 10 times with no spaces after exclamation point.
 ```
+```
+1.times do
+  puts "I'm a code block"
+end
+
+1.times { puts "As am I!" }
+
+// I'm a code block
+// As am I!
+```
 
 ##### <a name="while_loop">while loop</a>
 
@@ -155,7 +167,7 @@ end
 // 123
 ```
 
-##### <a name="arrays">arrays</a>
+##### <a name="arrays">Arrays</a>
 
 ```
 [1,2,3,4,5]
@@ -186,6 +198,83 @@ print multi_d_array[1][3]
 // 8
 ```
 
+Adds the numbers of an array together.
+```
+numbers = [5, 2, 8]
+sum = 0
+
+numbers.each do |n|
+  sum += n
+end
+
+puts sum
+
+// 15
+```
+
+capitalizes each string in an array
+```
+['ryan', 'jane'].each { |string| puts "#{string[0].upcase}#{string[1..-1]}" }
+
+// Ryan
+// Jane
+```
+
+The block, `{ |i| puts i }`, is passed the current array item each time it is evaluated.  This block prints the item multiplied by 5.
+
+```
+[1,2,3,4,5].each { |i| puts i * 5 }
+
+// 5
+// 10
+// 15
+// 20
+// 25
+```
+
+This block prints the number 5 for each item. (It chooses to ignore the passed item, which is allowed.)
+```
+[1,2,3,4,5].each { |i| puts 5 }
+
+// 5
+// 5
+// 5
+// 5
+// 5
+```
+
+##### <a name="array.sort">array.sort</a>
+
+Sorts the numbers in order starting with 1.
+```
+my_array = [3,4,8,7,1,6,5,9,2]
+puts my_array
+puts
+my_array.sort!
+puts my_array
+```
+
+Sorts the words in alphabetical order starting with "A"
+```
+my_array = ["sara", 'benny', 'ralph', 'eric', 'albert']
+puts my_array
+puts
+my_array.sort!
+puts my_array
+
+// sara
+// benny
+// ralph
+// eric
+// albert
+
+// albert
+// benny
+// eric
+// ralph
+// sara
+```
+
 ##### Hiding information
 
 ```
@@ -205,7 +294,7 @@ words.each do |word|
 end
 ```
 
-##### <a name="hashes">hashes</a>
+##### <a name="hashes">Hashes</a>
 
 a hash is a collection of key-value pairs
 
@@ -341,6 +430,7 @@ frequencies.each { |word, frequency| puts word + " " + frequency.to_s }
 
 ##### <a name="methods">Methods</a>
 
+Method checks to see if an integer is prime. Runs through the numbers 2 through the number minus 1 and divides the number by them. If any of the answers has no remainder, it says it is not prime.  If any have all remainders, it says it is prime.
 ```
 def prime(n)
   puts "That's not an integer." unless n.is_a? Integer
@@ -390,6 +480,8 @@ array_of_10
 // 9
 // 10
 ```
+
+Method that squares a number that is put in.
 ```
 def square(n)
   puts n ** 2
@@ -468,4 +560,15 @@ puts output
 
 // true
 // false
+```
+
+Method that capitalizes a word
+```
+def capitalize(string)
+  puts "#{string[0].upcase}#{string[1..-1]}"
+end
+
+capitalize('ryan')      // Ryan
+capitalize('jane')      // Jane
+capitalize('michAel')   // MichAel
 ```
