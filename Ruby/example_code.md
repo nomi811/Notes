@@ -86,7 +86,7 @@ array.each do |x|
   print "#{x}"
 end
 
-=> 1112131415
+// 1112131415
 ```
 
 ##### .times iterator
@@ -99,7 +99,7 @@ OR
   print "Chunky bacon!"
 end
 
-=> Will print Chunky bacon! 10 times with no spaces after exclamation point.
+// Will print Chunky bacon! 10 times with no spaces after exclamation point.
 ```
 
 ##### while loop
@@ -112,7 +112,7 @@ while i > 0 do
   i -= 1
 end
 
-=> 321
+// 321
 ```
 
 ##### until loop
@@ -125,7 +125,7 @@ until i == 0 do
   i -= 1
 end
 
-=> 321
+// 321
 ```
 
 ##### for loop
@@ -135,7 +135,7 @@ for k in 1..3
   print k
 end
 
-=> 123
+// 123
 ```
 
 ##### array
@@ -150,7 +150,7 @@ array = [1,2,3,4,5]
 
 print array[2]
 
-=> 3
+// 3
 ```
 
  string array `["hello", "car", "dog"]`
@@ -160,13 +160,13 @@ multi_d_array = [[1,2,3,4], [5,6,7,8], [9,10,11,12]]
 
 multi_d_array.each { |x| puts "#{x}\n"}
 
-=>  [1, 2, 3, 4]
+//  [1, 2, 3, 4]
     [5, 6, 7, 8]
     [9, 10, 11, 12]
 
 print multi_d_array[1][3]
 
-=> 8
+// 8
 ```
 
 ##### Hiding information
@@ -209,4 +209,13 @@ my_hash = { "name"    => "Eric",
 puts my_hash["name"]    // Eric
 puts my_hash["age"]     // 26
 puts my_hash["hungry?"] // true
+```
+
+`Hash.new` makes a new, empty hash
+```
+sounds = Hash.new
+sounds["dog"] = "woof"
+sounds["cat"] = "meow"
+
+puts sounds["dog"]    // woof
 ```
