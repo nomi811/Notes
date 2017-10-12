@@ -124,7 +124,7 @@ end
 
 
 
-##### <a name="histogram">Histogram</a> [:point_up:](#top)
+##### <a name="histogram">Histogram</a> :point_up:[top](#top)
 ```
 puts "Text please: "
 text = gets.chomp
