@@ -1,4 +1,4 @@
-# Hashes
+# <a name="top">Hashes</a>
 
 a hash is a collection of key-value pairs
 
@@ -47,6 +47,8 @@ end
 // Japanese
 // Mate
 ```
+
+:point_up:[top](#top)
 ```
 menagerie = {
   :foxes => 2,
@@ -92,6 +94,8 @@ new_hash = {
   three:  3
 }
 ```
+
+:point_up:[top](#top)
 ```
 grades = {
   alice:  100,
@@ -124,6 +128,8 @@ puts "Symbol time: #{symbol_time} seconds."
 // String time: 0.0121277219732292 seconds.
 // Symbol time: 0.00839714301400818 seconds.
 ```
+
+:point_up:[top](#top)
 ```
 movie_ratings = {
   memento:      3,
@@ -147,6 +153,8 @@ movie_ratings.each_key { |k| puts k, " " }    # just prints keys
 movie_ratings.each_value { |v| puts v, " " }  # just prints values
 ```
 A Program to keep track of movies and ratings
+
+:point_up:[top](#top)
 ```
 movies = {
   Memento:  3,
@@ -202,7 +210,7 @@ else
 end
 
 ```
-###### <a name="literal_notation">literal notation</a>
+###### <a name="literal_notation">literal notation</a> :point_up:[top](#top)
 
 ```
 my_hash = { "name"    => "Eric",
@@ -264,6 +272,8 @@ family.each { |x, y| puts "#{x}: #{y}" }
 // Abe: grandpa
 // Santa's Little Helper: dog
 ```
+
+:point_up:[top](#top)
 ```
 restaurant_menu = {
   'noodles' => 4,
@@ -298,3 +308,5 @@ restaurant_menu.each { |item, price| puts price }
 // 3
 // 2
 ```
+
+:point_up:[top](#top)

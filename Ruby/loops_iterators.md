@@ -1,4 +1,4 @@
-# Loops & Iterators
+# <a name="top">Loops & Iterators</a>
 
 * [.each iterator](#each_iterator)
 * [.times iterator](#times_iterator)
@@ -34,7 +34,7 @@ for i in 1..5
 end
 ```
 
-##### <a name="each_iterator">.each iterator</a>
+##### <a name="each_iterator">.each iterator</a> :point_up:[top](#top)
 ```
 array = [1,2,3,4,5]
 
@@ -53,7 +53,7 @@ end
 # 30
 ```
 
-##### <a name="times_iterator">.times iterator</a>
+##### <a name="times_iterator">.times iterator</a> :point_up:[top](#top)
 ```
 10.times {print "Chunky bacon!"}
 
@@ -85,7 +85,7 @@ end
 # Odelay!
 ```
 
-##### <a name="while_loop">while loop</a>
+##### <a name="while_loop">while loop</a> :point_up:[top](#top)
 
 ```
 i = 3
@@ -98,7 +98,7 @@ end
 // 321
 ```
 
-##### <a name="until_loop">until loop</a>
+##### <a name="until_loop">until loop</a> :point_up:[top](#top)
 
 ```
 i = 3
@@ -111,7 +111,7 @@ end
 // 321
 ```
 
-##### <a name="for_loop">for loop</a>
+##### <a name="for_loop">for loop</a> :point_up:[top](#top)
 
 ```
 for k in 1..3
@@ -121,7 +121,7 @@ end
 // 123
 ```
 
-##### <a name="upto">upto</a>
+##### <a name="upto">upto</a> :point_up:[top](#top)
 
 ```
 95.upto(100) { |num| print num, " " }
@@ -142,7 +142,7 @@ end
 # P
 ```
 
-##### <a name="collect">collect</a>
+##### <a name="collect">collect</a> :point_up:[top](#top)
 
 ```
 my_nums = [1,2,3]
@@ -162,3 +162,5 @@ puts my_nums
 ```
 collect doestn't actually change my_nums
 collect! changes my_nums
+
+:point_up:[top](#top)

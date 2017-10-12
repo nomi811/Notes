@@ -1,3 +1,5 @@
+# <a name="top">Command Line</a>
+
 `$pwd`    giving you your user name, telling you which folder you're inside of.
 `$open .` opens current folder we're in, in Finder
 `$ls` shows the folders and files inside the folder you are in
@@ -10,3 +12,5 @@
 `$ctrl c` exits the server
 `$chflags hidden ` then drag folder to be hidden into terminal screen. Then `<Enter>`
 `$chflags nohidden` to unhide a folder
+
+##### :point_up:[top](#top)

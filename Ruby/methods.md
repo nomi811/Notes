@@ -1,4 +1,4 @@
-##### <a name="methods">Methods</a>
+##### <a name="top">Methods</a>
 
 Method checks to see if an integer is prime. Runs through the numbers 2 through the number minus 1 and divides the number by them. If any of the answers has no remainder, it says it is not prime.  If any have all remainders, it says it is prime.
 ```
@@ -32,6 +32,8 @@ prime(18)
 // 97 is prime!
 // 18 is not prime.
 ```
+
+:point_up:[top](#top)
 ```
 def array_of_10
   puts (1..10).to_a
@@ -75,6 +77,8 @@ puts output
 
 // Hello, Nomi!
 ```
+
+:point_up:[top](#top)
 ```
 def by_three?(number)
   return number % 3 == 0
@@ -117,6 +121,7 @@ puts "Z-A: #{alphabetize books, true}"
 // A-Z: ["Emma", "Mansfield Park", "Pride and Prejudice", "Sense and Sensibility"]
 // Z-A: ["Sense and Sensibility", "Pride and Prejudice", "Mansfield Park", "Emma"]
 ```
+:point_up:[top](#top)
 
 To put numbers in order from smallest to largest
 ```
@@ -152,6 +157,8 @@ puts alphabetize(numbers)
 // 5
 // 8
 ```
+
+:point_up:[top](#top)
 ```
 def alphabetize(arr, rev=false)
   arr.sort!
@@ -171,3 +178,5 @@ puts alphabetize(numbers, true)
 // 3
 // 1
 ```
+
+:point_up:[top](#top)

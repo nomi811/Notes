@@ -1,4 +1,4 @@
-# Definitions
+# <a name="top">Definitions</a>
 
 ### [Arrays](#arrays)
 ### [Booleans](#booleans)
@@ -9,7 +9,7 @@
 ### [Symbols](#symbols)
 ### [Variables](#variables)
 
-##### <a name="arrays">Arrays</a>
+##### <a name="arrays">Arrays</a> :point_up:[top](#top)
 
 Arrays are ordered integer-indexed collection of objects.  They work like a pocket file folder.
 
@@ -32,11 +32,11 @@ Arrays are ordered integer-indexed collection of objects.  They work like a pock
 `array.unshift(1)`  - puts "1" at beginning of array
 `array + [9,10,11,12]`  - adds onto the previous array. doesn't change original array
 
-##### <a name="booleans">Booleans</a>
+##### <a name="booleans">Booleans</a> :point_up:[top](#top)
 
 Booleans are true or false statements
 
-##### <a name="hashes">Hashes</a>
+##### <a name="hashes">Hashes</a> :point_up:[top](#top)
 
 Hashes are unordered, object-indexed collections of objects (or key-value pairs)
 
@@ -79,7 +79,7 @@ puts person
   # {"gender"=>"male"}
 ```
 
-##### <a name="integers">Integers</a>
+##### <a name="integers">Integers</a> :point_up:[top](#top)
 
   - Integers  whole numbers
   - Floats    decimal numbers
@@ -96,15 +96,15 @@ puts person
 `.floor` will round down
 `.ceil` will round up
 
-##### <a name="objects">Objects</a>
+##### <a name="objects">Objects</a> :point_up:[top](#top)
 
 Objects are an instance of a class.
 
-##### <a name="strings">Strings</a>
+##### <a name="strings">Strings</a> :point_up:[top](#top)
 
 Sequences of characters that are strung together.
 
-##### <a name="symbols">Symbols</a>
+##### <a name="symbols">Symbols</a> :point_up:[top](#top)
 
 Symbols are labels used to identify a piece of data. They are stored in memory one-time. (Strings are stored in memory each time)
 
@@ -112,7 +112,7 @@ Symbols are labels used to identify a piece of data. They are stored in memory o
 
 `hash = { :first_name => 'Kevin', :last_name => "Smith" }`
 
-##### <a name="variables">Variables</a>
+##### <a name="variables">Variables</a> :point_up:[top](#top)
 
 Variables are not objects.
   - allow us to keep track of objects
@@ -127,3 +127,5 @@ Variables: scope indicators
   - Local     variable
   - Block     variable
 ```
+
+:point_up:[top](#top)

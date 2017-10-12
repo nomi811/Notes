@@ -1,4 +1,4 @@
-# Git
+# <a name="top">Git</a>
 
 
 ### [Basic Commands](#basic_commands)
@@ -6,7 +6,7 @@
 ### [Moving Around](#moving)
 ### [Remotes](#remotes)
 
-##### <a name="basic_commands">Basic Commands</a>
+##### <a name="basic_commands">Basic Commands</a> :point_up:[top](#top)
 
 `$git init` sets up a repository to be tracked by Git
 
@@ -26,7 +26,7 @@
     - `q` will quit and take you back to command prompt
     - `space bar` will page down
 
-##### <a name="branches">Branches</a>
+##### <a name="branches">Branches</a> :point_up:[top](#top)
 
 `$git branch` view branches, `*` marks current branch
 
@@ -38,7 +38,7 @@
 
 `$git branch -d <branch_name>` deletes the branch from your Git project
 
-##### <a name="moving">Moving Around</a>
+##### <a name="moving">Moving Around</a> :point_up:[top](#top)
 
 `$git reset HEAD <filename>` resets the file in the staging area to be the same as the HEAD commit. Does not discard from working directory, just removes from staging area.
 
@@ -46,7 +46,7 @@
 
 `$git checkout HEAD <filename>` discards changes in the working directory
 
-##### <a name="remotes">Remotes</a>
+##### <a name="remotes">Remotes</a> :point_up:[top](#top)
 
 `$git clone remote_location clone_name` "remote_location" tells Git where to find the remote web address or file path. Can click "clone button" on Git repository to add to clipboard and copy the url address. "clone_name" is the name you give to the directory in which Git will clone the repository.
 
@@ -59,3 +59,5 @@
 `$git push origin <your_branch_name>` will push your branch up to the remote origin. From there it can be reviewed and then merged into the master branch.
 
 `$git remote rm origin` removes origin
+
+:point_up:[top](#top)

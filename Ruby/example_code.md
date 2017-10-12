@@ -26,7 +26,7 @@
 ### [bank account example](#bank_account)
 
 
-## Examples
+## Examples :point_up:[top](#top)
 
 ```
 print "Integer please: "
@@ -103,7 +103,7 @@ puts a && b
 ```
 
 
-##### Hiding information
+##### Hiding information :point_up:[top](#top)
 
 ```
 puts "Text to search through: "
@@ -153,7 +153,7 @@ frequencies.each { |word, frequency| puts word + " " + frequency.to_s }
 
 
 
-##### <a name="splat_arguments">Splat Arguments</a>
+##### <a name="splat_arguments">Splat Arguments</a> :point_up:[top](#top)
 
 `*` splat signals to Ruby that we don't know how many there are going to be, but it could be more than one.
 ```
@@ -181,7 +181,7 @@ what_up("What up", "Justin", "Ben", "Kevin Sorbo")
 Only one greeting `"What up"`, multiple names `"Justin", "Ben", "Kevin Sorbo"`
 
 
-##### <a name="return">Return</a>
+##### <a name="return">Return</a> :point_up:[top](#top)
 
 ```
 def double(n)
@@ -207,7 +207,7 @@ puts multiple_of_three(9)   # True
 puts multiple_of_three(10)  # False
 ```
 
-##### <a name="respond_to?">respond_to?</a>
+##### <a name="respond_to?">respond_to?</a> :point_up:[top](#top)
 
 ```
 [1,2,3].respond_to?(:push)
@@ -219,7 +219,7 @@ would return true since you can call .push on an array object
 ```
 would return false since you can't turn an array into a symbol
 
-##### <a name="bank_account">bank account example</a>
+##### <a name="bank_account">bank account example</a> :point_up:[top](#top)
 
 ```
 class Account
@@ -261,3 +261,5 @@ my_account.withdraw(1234, 500_000)          # Withdrew 500000. New balance: $500
 my_account.display_balance(1234)            # Balance: $500000.
 
 ```
+
+:point_up:[top](#top)
