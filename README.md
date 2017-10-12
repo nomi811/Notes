@@ -15,6 +15,11 @@
   - [Variables](definitions.md#variables)
 
 ### [Git](Git/git.md)
+  - [Basic Commands](git.md#basic_commands)
+  - [Branches](git.md#branches)
+  - [Moving Around](git.md#moving)
+  - [Remotes](git.md#remotes)
+
 ### [HTML](HTML/HTML.md)
 ### JavaScript
 ### Rails

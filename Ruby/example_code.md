@@ -1,4 +1,4 @@
-# Topics
+# <a name="top">Topics</a>
 
 ### [Loops and Iterators](loops_iterators.md)
   * [.each iterator](loops_iterators.md#each_iterator)
@@ -24,6 +24,9 @@
 
 ### [respond_to?](#respond_to?)
 ### [bank account example](#bank_account)
+
+
+## Examples
 
 ```
 print "Integer please: "
@@ -121,7 +124,7 @@ end
 
 
 
-##### <a name="histogram">Histogram</a>
+##### <a name="histogram">Histogram</a> [:point_up:](#top)
 ```
 puts "Text please: "
 text = gets.chomp
