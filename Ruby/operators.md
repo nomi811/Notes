@@ -2,6 +2,9 @@
 
 
 `<=>` compairs two objects numerically or alphabetically
+`**` exponential
+`+=` adds and changes assignment of variable
+`-=` subtracts and changes assignment of variable
 
 shows `0` if they are equal
 shows `-1` if first is less than second

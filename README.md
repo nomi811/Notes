@@ -4,6 +4,13 @@
 
 ### Command line
 ### CSS
+### [Definitions](definitions.md)
+  - [Arrays](definitions.md#arrays)
+  - [Integers](definitions.md#integers)
+  - [Objects](definitions.md#objects)
+  - [Strings](definitions.md#strings)
+  - [Variables](definitions.md#variables)
+  
 ### [Git](Git/git.md)
 ### [HTML](HTML/HTML.md)
 ### JavaScript

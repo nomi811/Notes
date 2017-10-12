@@ -1,0 +1,69 @@
+# Definitions
+
+### [Arrays](#arrays)
+### [Integers](#integers)
+### [Objects](#objects)
+### [Strings](#strings)
+### [Variables](#variables)
+
+##### <a name="arrays">Arrays</a>
+
+Arrays are ordered integer-indexed collection of objects.  They work like a pocket file folder.
+
+`<<` append operator - adds to end of array
+
+`.clear`      - to empty an array
+`= []`        - to empty an array
+`.inspect`    - returns back the array as a string
+`.join`       - puts everything in array and smooshes together as a string
+`.join(", ")` - separates with commas
+`.split(',')` - splits the objects at the comma and makes each a separate string inside an array
+
+`array.uniq`  - just shows a new array with only the unizue values but doesn't change array
+`array.uniq!` - shows just unique values and changes array. Gets rid of duplicates
+`array.delete_at(2)`  - deletes array value at the (2) position
+`array.delete(4)` - will delete the number "4" from array
+`array.push(4)` - will add "4" to end of array
+`array.pop` - will delete the last value of array
+`array.shift` - deletes first value of array
+`array.unshift(1)`  - puts "1" at beginning of array
+##### <a name="integers">Integers</a>
+
+  - Integers  whole numbers
+  - Floats    decimal numbers
+
+`**` exponential
+`+=` adds and changes assignment of variable
+
+`-200.abs`  # returns 200
+`200.next`  # returns 201
+`x.class`   # says what class integer is. Fixnum or Bignum
+
+`.round` rounds up
+`.to_i`   will round by cutting off decimal values
+`.floor` will round down
+`.ceil` will round up
+
+##### <a name="objects">Objects</a>
+
+Objects are an instance of a class.
+
+##### <a name="strings">Strings</a>
+
+Sequences of characters that are strung together.
+
+##### <a name="variables">Variables</a>
+
+Variables are not objects.
+  - allow us to keep track of objects
+  - are undefined or act like an object
+  - point to objects
+
+Variables: scope indicators
+```
+  - Global    $variable
+  - Class     @@variable
+  - Instance  @variable
+  - Local     variable
+  - Block     variable
+```
