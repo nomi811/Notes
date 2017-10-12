@@ -1,4 +1,4 @@
-#Loops & Iterators
+# Loops & Iterators
 
 * [.each iterator](#each_iterator)
 * [.times iterator](#times_iterator)
@@ -6,6 +6,7 @@
 * [until loop](#until_loop)
 * [for loop](#for_loop)
 * [upto](#upto)
+* [collect](#collect)
 
 Repeat an action using an **iterator**. Iterator invokes a block of code.  The code block is just the bit that contains the instructions to be repeated. When you loop over an array or a hash, you say that you *iterate* over it.
 
@@ -140,3 +141,24 @@ end
 
 # P
 ```
+
+##### <a name="collect">collect</a>
+
+```
+my_nums = [1,2,3]
+puts my_nums
+puts "------------"
+my_nums.collect { |num| num ** 2 }
+
+puts my_nums
+puts "*************"
+
+my_nums = [1,2,3]
+puts my_nums
+puts "------------"
+my_nums.collect! { |num| num ** 2 }
+
+puts my_nums
+```
+collect doestn't actually change my_nums
+collect! changes my_nums

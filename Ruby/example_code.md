@@ -7,6 +7,7 @@
   * [until loop](loops_iterators.md#until_loop)
   * [for loop](loops_iterators.md#for_loop)
   * [upto](loops_iterators.md#upto)
+  * [collect](loops_iterators.md#collect)
 
   - [array.sort](arrays.md#array.sort)
 
@@ -22,6 +23,7 @@
   - [Conditional Assignment](Ruby/operators.md#conditional_assignment)
 
 ### [respond_to?](#respond_to?)
+### [bank account example](#bank_account)
 
 ```
 print "Integer please: "
@@ -213,3 +215,46 @@ would return true since you can call .push on an array object
 [1,2,3].respond_to?(:to_sym)
 ```
 would return false since you can't turn an array into a symbol
+
+##### <a name="bank_account">bank account example</a>
+
+```
+class Account
+  attr_reader :name, :balance
+
+  def initialize(name, balance = 100)
+    @name = name
+    @balance = balance
+  end
+
+  def display_balance(pin_number)
+    puts pin_number == pin ? "Balance: $#{@balance}." : pin_error
+  end
+
+  def withdraw(pin_number, amount)
+    if pin_number == pin
+      @balance -= amount
+      puts "Withdrew #{amount}. New balance: $#{@balance}."
+    else
+      puts pin_error
+    end
+  end
+
+  private
+
+  def pin
+    @pin = 1234
+  end
+
+  def pin_error
+    "Access denied: incorrect PIN."
+  end
+end
+
+my_account = Account.new("Eric", 1_000_000)
+my_account.withdraw(11, 500_000)            # Access denied: incorrect PIN.
+my_account.display_balance(1234)            # Balance: $1000000.
+my_account.withdraw(1234, 500_000)          # Withdrew 500000. New balance: $500000.
+my_account.display_balance(1234)            # Balance: $500000.
+
+```
