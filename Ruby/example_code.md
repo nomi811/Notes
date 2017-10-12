@@ -1,26 +1,25 @@
 # Topics
 
-### [Loops and Iterators](#loops_iterators)
-* [.each iterator](#each_iterator)
-* [.times iterator](#times_iterator)
-* [while loop](#while_loop)
-* [until loop](#until_loop)
-* [for loop](#for_loop)
-* [upto](#upto)
+### [Loops and Iterators](Ruby/loops_iterators.md#loops_iterators)
+  * [.each iterator](Ruby/loops_iterators.md#each_iterator)
+  * [.times iterator](Ruby/loops_iterators.md#times_iterator)
+  * [while loop](Ruby/loops_iterators.md#while_loop)
+  * [until loop](Ruby/loops_iterators.md#until_loop)
+  * [for loop](Ruby/loops_iterators.md#for_loop)
+  * [upto](Ruby/loops_iterators.md#upto)
 
-### [Arrays](#arrays)
-  - [array.sort](#array.sort)
+  - [array.sort](Ruby/arrays.md#array.sort)
 
-### [Hashes](#hashes)
+### [Hashes](Ruby/hashes.md#hashes)
   - [literal notation](#literal_notation)
 
 ### [Histogram](#histogram)
-### [Methods](#methods)
+### [Methods](Ruby/methods.md#methods)
 ### [Splat Arguments](#splat_arguments)
 ### [Return](#return)
-### [Operators](#operators)
-  - [Compair Operators](#compair_operators)
-  - [Conditional Assignment](#conditional_assignment)
+### [Operators](Ruby/operators.md#operators)
+  - [Compair Operators](Ruby/operators.md#compair_operators)
+  - [Conditional Assignment](Ruby/operators.md#conditional_assignment)
 
 ### [respond_to?](#respond_to?)
 
