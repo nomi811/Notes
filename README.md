@@ -6,11 +6,14 @@
 ### CSS
 ### [Definitions](definitions.md)
   - [Arrays](definitions.md#arrays)
+  - [Booleans](definitions.md#booleans)
+  - [Hashes](definitions.md#hashes)
   - [Integers](definitions.md#integers)
   - [Objects](definitions.md#objects)
   - [Strings](definitions.md#strings)
+  - [Symbols](definitions.md#symbols)
   - [Variables](definitions.md#variables)
-  
+
 ### [Git](Git/git.md)
 ### [HTML](HTML/HTML.md)
 ### JavaScript
