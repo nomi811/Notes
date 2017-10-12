@@ -17,7 +17,9 @@
 ### [Methods](#methods)
 ### [Splat Arguments](#splat_arguments)
 ### [Return](#return)
-### [Compair Operators](#compair_operators)
+### [Operators](#operators)
+  - [Compair Operators](#compair_operators)
+  - [Conditional Assignment](#conditional_assignment)
 
 ```
 print "Integer please: "
@@ -70,104 +72,7 @@ end
 `...` - don't include highest number in range
 `..` - include highest number in range
 
-#### <a name="loops_iterators">Loops & Iterators</a>
 
-Repeat an action using an **iterator**. Iterator invokes a block of code.  The code block is just the bit that contains the instructions to be repeated. When you loop over an array or a hash, you say that you *iterate* over it.
-
-```
-i = 0
-loop do
-  i += 1
-  print "#{i}"
-  break if i > 5
-end
-```
-
-Prints just odd numbers
-```
-for i in 1..5
-  next if i % 2 == 0
-  print i
-end
-```
-Prints just even numbers
-```
-for i in 1..5
-  next if i % 2 != 0
-  print i
-end
-```
-
-##### <a name="each_iterator">.each iterator</a>
-```
-array = [1,2,3,4,5]
-
-array.each do |x|
-  x += 10
-  print "#{x}"
-end
-
-// 1112131415
-```
-
-##### <a name="times_iterator">.times iterator</a>
-```
-10.times {print "Chunky bacon!"}
-
-OR
-
-10.times do
-  print "Chunky bacon!"
-end
-
-// Will print Chunky bacon! 10 times with no spaces after exclamation point.
-```
-```
-1.times do
-  puts "I'm a code block"
-end
-
-1.times { puts "As am I!" }
-
-// I'm a code block
-// As am I!
-```
-
-##### <a name="while_loop">while loop</a>
-
-```
-i = 3
-
-while i > 0 do
-  print i
-  i -= 1
-end
-
-// 321
-```
-
-##### <a name="until_loop">until loop</a>
-
-```
-i = 3
-
-until i == 0 do
-  print i
-  i -= 1
-end
-
-// 321
-```
-
-##### <a name="for_loop">for loop</a>
-
-```
-for k in 1..3
-  print k
-end
-
-// 123
-```
 
 ##### <a name="arrays">Arrays</a>
 
@@ -307,7 +212,201 @@ hash = {
   key3 = value3
 }
 ```
+hash literal notation
+```
+new_hash = { "one " => 1 }
+```
+
+hash constructor notation
+```
+new_hash = Hash.new
+
+OR
+
+new_hash = Hash.new("goofy goober")  # puts what's in the parenthesis into the hash
+```
+
+iterating over a hash
+```
+my_hash.each do |key, value|
+  puts key, my_hash[key]
+end
+```
+```
+matz = {"First name" => "Yukihiro",
+        "Last name" => "Matsumoto",
+        "Age" => 47,
+        "Nationality" => "Japanese",
+        "Nickname" => "Mate"
+}
+
+matz.each do |key, value|
+  puts value        # gives only the value
+end
+
+// Yukihiro
+// Matsumoto
+// 47
+// Japanese
+// Mate
+```
+```
+menagerie = {
+  :foxes => 2,
+  :weezards => 17,
+  :elves => 1,
+  :canaries => 4,
+  :ham => 1
+}
+
+puts "string".object_id   # 70304701738880
+puts "string".object_id   # 70304701737680
+puts :symbol.object_id    # 807708
+puts :symbol.object_id    # 807708
+```
+```
+strings = ["one", "two", "three", "four"]
+symbols = []
+strings.each do |s|
+  symbols.push(s.to_sym)  # or .intern to internalize the string into a symbol
+end
+
+print symbols
+
+// [:one, :two, :three, :four]
+```
+```
+:hello.to_s       # "hello"
+"hello".to_sym    # :hello
+```
+```
+symbol_hash = {
+  :one    => 1,
+  :two    => 2,
+  :three  => 3
+}
+
+SAME AS
+NEW SYNTAX
+
+new_hash = {
+  one:    1,
+  two:    2,
+  three:  3
+}
+```
+```
+grades = {
+  alice:  100,
+  bob:    92,
+  chris:  95,
+  dave:   97
+}
+
+puts grades.select { |name, grade| grade < 97 }   // {:bob=>92, :chris=>95}
+
+puts grades.select { |k, v| k == :alice }   // {:alice=>100}
+```
+```
+require 'benchmark'
+
+string_AZ = Hash[("a".."z").to_a.zip((1..26).to_a)]
+symbol_AZ = Hash[(:a..:z).to_a.zip((1..26).to_a)]
+
+string_time = Benchmark.realtime do
+  100_000.times { string_AZ["r"] }
+end
+
+symbol_time = Benchmark.realtime do
+  100_000.times { symbol_AZ[:r] }
+end
+
+puts "String time: #{string_time} seconds."
+puts "Symbol time: #{symbol_time} seconds."
+
+// String time: 0.0121277219732292 seconds.
+// Symbol time: 0.00839714301400818 seconds.
+```
+```
+movie_ratings = {
+  memento:      3,
+  primer:       3.5,
+  the_matrix:   5,
+  truman_show:  4,
+  red_dawn:     1.5,
+  skyfall:      4,
+  alex_cross:   2,
+  uhf:          1,
+  lion_king:    3.5
+}
+
+good_movies = movie_ratings.select { |k, v| v > 3 }
+puts good_movies
+
+// {:primer=>3.5, :the_matrix=>5, :truman_show=>4, :skyfall=>4, :lion_king=>3.5}
+
+movie_ratings.each_key { |k| puts k, " " }    # just prints keys
+
+movie_ratings.each_value { |v| puts v, " " }  # just prints values
+```
+A Program to keep track of movies and ratings
+```
+movies = {
+  Memento:  3,
+  Primer:   4,
+  Ishtar:   1
+}
+
+puts "What would you like to do?"
+puts "-- Type 'add' to add a movie."
+puts "-- Type 'update' to update a movie."
+puts "-- Type 'display' to display all movies."
+puts "-- Type 'delete' to delete a movie."
+
+choice = gets.chomp.downcase
+case choice
+when 'add'
+  puts "What movie do you want to add?"
+  title = gets.chomp
+  if movies[title.to_sym].nil?
+    puts "What's the rating? (Type a number 0 to 4.)"
+    rating = gets.chomp
+    movies[title.to_sym] = rating.to_i
+    puts "#{title} has been added with a rating of #{rating}."
+  else
+    puts "That movie already exists! It's rating is #{movies[title.to_sym]}."
+  end
+when 'update'
+  puts "What movie do you want to update?"
+  title = gets.chomp
+  if movies[title.to_sym].nil?
+    puts "Movie not found."
+  else
+    puts "What's the new rating? (Type a number 0 to 4.)"
+    rating = gets.chomp
+    movies[title.to_sym] = rating.to_i
+    puts "#{title} has been updated with new rating of #{rating}."
+  end
+when 'display'
+  movies.each do |movie, rating|
+    puts "#{movie}: #{rating}"
+  end
+when 'delete'
+  puts "What movie do you want to delete?"
+  title = gets.chomp
+  if movies[title.to_sym].nil?
+    puts "Movie not found!"
+  else
+    movies.delete(title.to_sym)
+    puts "#{title} has been removed."
+  end
+else
+  puts "Sorry, I didn't understand you."
+end
+
+```
 ###### <a name="literal_notation">literal notation</a>
+
 ```
 my_hash = { "name"    => "Eric",
             "age"     => 26,
