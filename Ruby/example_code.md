@@ -6,6 +6,7 @@
 * [while loop](#while_loop)
 * [until loop](#until_loop)
 * [for loop](#for_loop)
+* [upto](#upto)
 
 ### [Arrays](#arrays)
   - [array.sort](#array.sort)
@@ -20,6 +21,8 @@
 ### [Operators](#operators)
   - [Compair Operators](#compair_operators)
   - [Conditional Assignment](#conditional_assignment)
+
+### [respond_to?](#respond_to?)
 
 ```
 print "Integer please: "
@@ -72,7 +75,28 @@ end
 `...` - don't include highest number in range
 `..` - include highest number in range
 
+```
+def a
+  puts "A was evaluated!"
+  return true
+end
 
+def b
+  puts "B was also evaluated!"
+  return true
+end
+
+puts a || b
+puts "-------------"
+puts a && b
+
+# A was evaluated!
+# true
+# -------------
+# A was evaluated!
+# B was also evaluated!
+# true
+```
 
 
 ##### Hiding information
@@ -166,3 +190,27 @@ puts output
 
 // 14
 ```
+```
+def multiple_of_three(n)
+  return n % 3 == 0? "True" : "False"
+end
+
+def multiple_of_three(n)
+  n % 3 == 0? "True" : "False"
+end
+
+puts multiple_of_three(9)   # True
+puts multiple_of_three(10)  # False
+```
+
+##### <a name="respond_to?">respond_to?</a>
+
+```
+[1,2,3].respond_to?(:push)
+```
+would return true since you can call .push on an array object
+
+```
+[1,2,3].respond_to?(:to_sym)
+```
+would return false since you can't turn an array into a symbol

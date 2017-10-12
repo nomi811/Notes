@@ -5,6 +5,7 @@
 * [while loop](#while_loop)
 * [until loop](#until_loop)
 * [for loop](#for_loop)
+* [upto](#upto)
 
 Repeat an action using an **iterator**. Iterator invokes a block of code.  The code block is just the bit that contains the instructions to be repeated. When you loop over an array or a hash, you say that you *iterate* over it.
 
@@ -43,6 +44,13 @@ end
 
 // 1112131415
 ```
+```
+[1,2,3].each { |x| puts x * 10 }
+
+# 10
+# 20
+# 30
+```
 
 ##### <a name="times_iterator">.times iterator</a>
 ```
@@ -65,6 +73,15 @@ end
 
 // I'm a code block
 // As am I!
+```
+```
+5.times { puts "Odelay!" }
+
+# Odelay!
+# Odelay!
+# Odelay!
+# Odelay!
+# Odelay!
 ```
 
 ##### <a name="while_loop">while loop</a>
@@ -101,4 +118,25 @@ for k in 1..3
 end
 
 // 123
+```
+
+##### <a name="upto">upto</a>
+
+```
+95.upto(100) { |num| print num, " " }
+
+# 95 96 97 98 99 100
+```
+```
+"L".upto("P") { |letter| puts letter, " " }
+
+# L
+
+# M
+
+# N
+
+# O
+
+# P
 ```
