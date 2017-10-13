@@ -4,6 +4,7 @@
 
 `$heroku login`
 `$heroku create` to create the app with a random Heroku name
+`$heroku create <app_name>` to create the app with a name you choose
 `$git push heroku master` to push changes to Heroku
 
 `$heroku git:remote -a <app_name>` - to create heroku remote

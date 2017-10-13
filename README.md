@@ -24,7 +24,7 @@
 
 ### [HTML](HTML/HTML.md)
 ### JavaScript
-### Rails
+### [Rails](Rails/rails.md)
 ### Responsive
 ### [Ruby](Ruby/example_code.md)
   - [Arrays](Ruby/arrays.md)
