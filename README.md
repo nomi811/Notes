@@ -20,6 +20,8 @@
   - [Moving Around](git.md#moving)
   - [Remotes](git.md#remotes)
 
+### [Heroku](Heroku/heroku.md)
+
 ### [HTML](HTML/HTML.md)
 ### JavaScript
 ### Rails
@@ -35,5 +37,5 @@
     * [until loop](Ruby/loops_iterators.md#until_loop)
     * [for loop](Ruby/loops_iterators.md#for_loop)
   - [Operators](Ruby/operators.md)
-  
+
 ##### :point_up:[top](#top)
