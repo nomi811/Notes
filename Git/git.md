@@ -20,7 +20,7 @@
 
 `$git status` checks to see if everything is up to date or if changes have been made that haven't been committed yet.
 
-`$git push` will push changes to GitHub. Only works with this simple version after setting it by using `$git push origin master -u`
+`$git push` will push changes to GitHub. Only works with this simple version after setting it by using `$git push -u origin master`
 
 `$git log` prints out a log of changes
     - `q` will quit and take you back to command prompt
